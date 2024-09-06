@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bondi.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+
+          <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#main" 
+          aria-controls="main" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-angle-down"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main">
+        
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3 " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3 active" href="cart.html">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#contact">Contact Us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#about">About Us</a>
+
+              </li>
+            </ul>  
+        </div>
+    </nav>
+
+    <div class="search pt-1 pb-1 text-center text-md-start">
+      <div class="container">
+        <form class="row align-items-center">
+          <div class="col-md-4 col-lg-3">
+            <div class="fw-bold fs-5 mb-3">
+              <a href="main.html"><img src="logo.png" style="width:50%;height:100px;"></a>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-lg-8 mb-3 d-flex">
+            <input class="rounded-pill w-100 p-2" type="search" placeholder="Insert an item.." />
+            <input class="btn rounded-pill ms-5 " type="button" value="Search" />
+          </div>
+
+        </form>
+      </div>
+  </div>
+
+    
+
+
+    <div class="navbar navbar-expand-lg">
+        <div class="container">
+            <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#menu" 
+            aria-controls="menu" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+            
+              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link p-2 p-lg-3" aria-current="page" href="oils.html">Oils</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2 p-lg-3" href="battaries.html">Batteries</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link p-2 p-lg-3" href="brake.html">Brake Pads</a>
+
+                </li><li class="nav-item">
+                    <a class="nav-link p-2 p-lg-3" href="accessories.html">Accessories</a>
+                </li>
+                </ul>
+            </div>    
+        </div>
+    </div>
+
+  <section class="cart h-100 h-custom" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card">
+                <div class="card-body p-4">
+                  <div class="row">
+
+                    <div class="col-lg-12">
+                      <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex ">
+                          <i style="color:rgba(255, 166, 0, 0.949) ;"class="fa-solid fa-cart-shopping fa-2x me-2"></i>
+                          <h5 class="mb-1 ">عربة التسوق</h5>
+
+                            <button class="ms-auto btn btn-info btn-block btn-lg text-white" style="background-color: rgba(255, 166, 0, 0.949); border: #132763; position: absolute; top: 12px;right: 16px;" type="button" >
+                              <div class="d-flex justify-content-between">
+                                <span class="">الدفع</span>
+                              </div>
+                            </button>
+                          
+
+                        </div>
+                      </div>
+
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center">
+                              <div>
+                                <img
+                                  src="oils.png"
+                                  class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                              </div>
+                              <div class="ms-3">
+                                <h5>زيوت</h5>
+                                <p class="small mb-0">زيوت BOSCH</p>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center">
+                              <div style="width: 50px;">
+                                <button class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input id="form1" min="0" name="quantity" value="2" type="number"
+                                    class="form-control form-control-sm" />
+                                    <button class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                              </div>
+                              <div style="width: 80px;">
+                                <h5 class="mb-0 ms-2">$50</h5>
+                              </div>
+                              <a href="#!" style="color:rgba(255, 166, 0, 0.949);"><i class="fas fa-trash-alt fa-xl"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center">
+                              <div>
+                                <img
+                                  src="battery.png"
+                                  class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                              </div>
+                              <div class="ms-3">
+                                <h5>زيوت</h5>
+                                <p class="small mb-0">بطارية AGM</p>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center">
+                              <div style="width: 50px;">
+                                <button class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input id="form1" min="0" name="quantity" value="1" type="number"
+                                    class="form-control form-control-sm" />
+                                    <button class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                              </div>
+                              <div style="width: 80px;">
+                                <h5 class="mb-0 ms-2">$70</h5>
+                              </div>
+                              <a href="#!" style="color:rgba(255, 166, 0, 0.949);"><i class="fas fa-trash-alt fa-xl"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row align-items-center">
+                              <div>
+                                <img
+                                  src="brakes.png"
+                                  class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                              </div>
+                              <div class="ms-3">
+                                <h5>زيوت</h5>
+                                <p class="small mb-0">مكابح</p>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center">
+                              <div style="width: 50px;">
+                                <button class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input id="form1" min="0" name="quantity" value="3" type="number"
+                                    class="form-control form-control-sm" />
+                                    <button class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                              </div>
+                              <div style="width: 80px;">
+                                <h5 class="mb-0 ms-2">$20</h5>
+                              </div>
+                              <a href="#!" style="color:rgba(255, 166, 0, 0.949);"><i class="fas fa-trash-alt fa-xl"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <footer class="footer text-center text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 id="about" class=" about text-uppercase">معلومات عنا</h5>
+          <p>تأسست باور ويلز في عام 2023 بهدف توفير قطع غيار سيارات عالية الجودة بأسعار معقولة</p>
+        </div>
+  
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 id="contact" class="text-uppercase">تواصل معنا</h5>
+  
+          <p>
+            <p>إذا كانت لديك أي أسئلة أو استفسارات ، فلا تتردد في التواصل معنا على</p>
+              <ul style="list-style-type: none;">
+                <li><i class="fa-solid fa-envelope"></i><b> البريد الإلكتروني: </b>info@powerwheels.com</li>
+                <li><i class="fa-solid fa-square-phone"></i><b> رقم الهاتف: </b> **********</li>
+              </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="text-center p-3">
+      <p>&copy; جميع الحقوق محفوظة لدى باور ويلز</p>
+    </div>
+</footer>
+    
+</body>
+</html>
